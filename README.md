@@ -2,6 +2,8 @@
 
 Portfolio immersif d’un développeur full-stack basé à Antananarivo : univers 3D en particules, guide IA qui fait visiter le site et répond aux questions, site en **français, anglais et malagasy**, et interface d’administration complète (contenu, messages, statistiques de visite).
 
+**Site en ligne : [portfolio.ndimby-portfolio.workers.dev](https://portfolio.ndimby-portfolio.workers.dev)**
+
 Hébergement **100 % gratuit** sur Cloudflare (Workers, D1, KV, Workers AI) — aucune carte bancaire nécessaire.
 
 ![Accueil du portfolio](docs/accueil.webp)
