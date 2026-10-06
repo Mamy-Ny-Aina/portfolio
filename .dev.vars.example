@@ -1,0 +1,18 @@
+# Copiez ce fichier en `.dev.vars` pour le développement local (il n'est jamais commité).
+# En production, définissez ces valeurs avec `npx wrangler secret put NOM`.
+
+# Obligatoire : mot de passe de l'interface d'administration (/admin)
+ADMIN_PASSWORD=change-moi
+# Obligatoire : chaîne aléatoire longue servant à signer les sessions admin
+SESSION_SECRET=remplacez-par-une-longue-chaine-aleatoire
+
+# Optionnel : envoi des e-mails du formulaire de contact (https://resend.com, gratuit)
+RESEND_API_KEY=
+# RESEND_FROM=Portfolio <onboarding@resend.dev>
+
+# Optionnel : fournisseurs d'IA plus puissants que Workers AI (gratuit, utilisé par défaut)
+# ANTHROPIC_API_KEY=
+# CLAUDE_MODEL=claude-opus-5-5
+# GEMINI_API_KEY=
+# GEMINI_MODEL=gemini-flash-latest
+# WORKERS_AI_MODEL=@cf/google/gemma-4-26b-a4b-it

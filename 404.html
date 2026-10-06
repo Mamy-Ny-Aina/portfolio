@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Page introuvable — Ndimby Razafinjatovo</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script src="/boot.js"></script>
+    <style>
+      :root { color-scheme: dark; --bg: #0b0b0d; --text: #f1efe9; --muted: #8f8b84; --accent: #ff6a3d; }
+      [data-theme='light'] { color-scheme: light; --bg: #f3f0ea; --text: #151412; --muted: #6d6962; --accent: #e5491d; }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        display: grid; place-items: center; background: var(--bg); color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; padding: 24px;
+        background-image: radial-gradient(60rem 30rem at 80% -10%, color-mix(in oklab, var(--accent) 16%, transparent), transparent 60%);
+      }
+      main { max-width: 34rem; }
+      .code { font: 600 clamp(6rem, 26vw, 12rem)/0.8 ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.06em; }
+      .code span { color: var(--accent); }
+      h1 { font-weight: 500; font-size: 1.6rem; margin: 1.5rem 0 0.5rem; letter-spacing: -0.02em; }
+      p { color: var(--muted); line-height: 1.6; margin: 0 0 2rem; }
+      a { display: inline-flex; align-items: center; gap: .5rem; padding: 0.85rem 1.3rem; border-radius: 999px; background: var(--text); color: var(--bg); text-decoration: none; font-weight: 600; }
+      a:hover { background: var(--accent); color: #fff; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="code">4<span>0</span>4</div>
+      <h1>Cette page n’existe pas.</h1>
+      <p>This page doesn’t exist · Tsy misy ity pejy ity.</p>
+      <a href="/">← Retour au portfolio</a>
+    </main>
+  </body>
+</html>
