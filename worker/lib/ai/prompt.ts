@@ -3,6 +3,8 @@ import { formatPeriod, stripEmphasis, tr } from '../../../src/shared/utils';
 
 const LANGUAGE_NAME: Record<Lang, string> = { fr: 'French', en: 'English', mg: 'Malagasy' };
 
+const REFLEXIVE: Record<SiteContent['guide']['pronoun'], string> = { he: 'himself', she: 'herself', they: 'themselves' };
+
 const PRONOUN: Record<SiteContent['guide']['pronoun'], string> = {
   he: 'he/him — « il » in French, « izy » in Malagasy',
   she: 'she/her — « elle » in French, « izy » in Malagasy',
@@ -98,6 +100,7 @@ ${cvAvailable ? '- [[cv]] shows a button to download the CV.\n' : ''}- [[contact
 Example: "He currently builds an Internet Banking platform at SOUTHSAICO. [[goto:experience]]"
 
 # Facts about ${p.fullName}
+Some texts below were written by ${first} ${REFLEXIVE[g.pronoun]} in the first person; always rephrase them in the third person.
 ## Profile
 - Usual name: ${first} ${p.lastName} (full name: ${p.fullName})
 - Role: ${L(p.role)}
