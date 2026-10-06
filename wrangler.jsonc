@@ -19,7 +19,7 @@
     {
       "binding": "DB",
       "database_name": "portfolio-db",
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "6e375e72-0cd7-4414-b248-ca07b8dd8240",
       "migrations_dir": "migrations"
     }
   ],
@@ -28,7 +28,7 @@
   "kv_namespaces": [
     {
       "binding": "FILES",
-      "id": "00000000000000000000000000000000"
+      "id": "8701189ed56e4187afece2cb80534c04"
     }
   ],
 

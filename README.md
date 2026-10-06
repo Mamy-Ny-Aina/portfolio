@@ -41,7 +41,7 @@ Hébergement **100 % gratuit** sur Cloudflare (Workers, D1, KV, Workers AI) — 
 | 3D | WebGL2 natif (shaders GLSL écrits à la main) |
 | Serveur | Cloudflare Workers + Hono |
 | Données | D1 (SQLite) pour le contenu, les visites et les messages ; KV pour les fichiers |
-| IA | Workers AI (gratuit, Gemma 4 / Llama 3.3) ; Google Gemini ou Claude en option |
+| IA | Workers AI (gratuit, Llama 4 Scout / Llama 3.3) ; Google Gemini ou Claude en option |
 | E-mails | Resend (3 000 e-mails/mois gratuits) |
 
 ```

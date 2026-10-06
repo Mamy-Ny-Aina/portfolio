@@ -15,4 +15,4 @@ RESEND_API_KEY=
 # CLAUDE_MODEL=claude-opus-5-5
 # GEMINI_API_KEY=
 # GEMINI_MODEL=gemini-flash-latest
-# WORKERS_AI_MODEL=@cf/google/gemma-4-26b-a4b-it
+# WORKERS_AI_MODEL=@cf/meta/llama-4-scout-17b-16e-instruct

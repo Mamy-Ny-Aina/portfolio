@@ -7,8 +7,10 @@ type ProviderStream = (env: Env, system: string, messages: ChatMessage[], maxTok
 
 /** Modèles Workers AI essayés dans l'ordre (gratuits dans la limite de 10 000 neurones/jour). */
 const WORKERS_AI_MODELS = [
-  '@cf/google/gemma-4-26b-a4b-it',
+  // Le plus rapide (premier mot en moins d'une seconde) avec un bon malagasy.
+  '@cf/meta/llama-4-scout-17b-16e-instruct',
   '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
+  '@cf/mistralai/mistral-small-3.1-24b-instruct',
   '@cf/meta/llama-3.1-8b-instruct-fp8-fast',
 ];
 
@@ -134,8 +136,9 @@ const workersAiStream: ProviderStream = async function* (env, system, messages, 
       if (!(result instanceof ReadableStream)) throw new Error('réponse non diffusée');
       for await (const data of sseData(result as ReadableStream<Uint8Array>)) {
         if (!data || data === '[DONE]') continue;
-        const json = JSON.parse(data) as { response?: string; choices?: { delta?: { content?: string | null } }[] };
-        const text = json.response ?? json.choices?.[0]?.delta?.content ?? '';
+        const json = JSON.parse(data) as { response?: unknown; choices?: { delta?: { content?: unknown } }[] };
+        const candidate = typeof json.response === 'string' && json.response ? json.response : json.choices?.[0]?.delta?.content;
+        const text = typeof candidate === 'string' ? candidate : '';
         if (text) {
           produced = true;
           yield text;
